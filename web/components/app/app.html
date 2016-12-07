@@ -1,0 +1,24 @@
+<material-sidenav [(open)]="open" [overlay]="overlay">
+    <material-toolbar bottomTitle="John Doe" [tall]="true"></material-toolbar>
+    <div id="menu">
+        <menu-item icon="person">My Profile</menu-item>
+        <menu-item icon="favorite">My Likes</menu-item>
+        <menu-separator></menu-separator>
+        <menu-item icon="settings">Account Settings...</menu-item>
+        <menu-separator></menu-separator>
+        <menu-item icon="exit_to_app">Log Out</menu-item>
+    </div>
+</material-sidenav>
+<material-sidenav [(open)]="right" [overlay]="overlay" [right]="true">
+    <div class="content">
+        <h1>Right Content</h1>
+    </div>
+</material-sidenav>
+<material-toolbar (iconClick)="open = !open" icon="menu" title="Sidenav Example"></material-toolbar>
+<div class="content">
+    <material-checkbox [(ngModel)]="open" label="Toggle Left Sidenav"></material-checkbox>
+    <br>
+    <material-checkbox [(ngModel)]="right" label="Toggle Right Sidenav"></material-checkbox>
+    <br>
+    <material-checkbox [(ngModel)]="overlay" label="Show Overlays"></material-checkbox>
+</div>
