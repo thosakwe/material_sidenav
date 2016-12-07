@@ -6,7 +6,8 @@
 .project
 .pub/
 .scripts-bin/
-build/
+build/web/components
+build/web/packages
 **/packages/
 
 # Files created by dart2js
@@ -19,6 +20,7 @@ build/
 *.js.deps
 *.js.map
 *.info.json
+*.ng*.json
 
 # Directory created by dartdoc
 doc/api/
