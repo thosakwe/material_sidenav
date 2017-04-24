@@ -1,0 +1,69 @@
+{
+  "ngDeps": {
+    "1": "material_menu",
+    "3": [
+      {
+        "1": "src/material_menu/material_menu.dart",
+        "5": false
+      },
+      {
+        "1": "src/menu_item/menu_item.dart",
+        "5": false
+      },
+      {
+        "1": "src/menu_separator/menu_separator.dart",
+        "5": false
+      }
+    ],
+    "4": [
+      {
+        "1": "src/material_menu/material_menu.dart"
+      },
+      {
+        "1": "src/menu_item/menu_item.dart"
+      },
+      {
+        "1": "src/menu_separator/menu_separator.dart"
+      }
+    ],
+    "6": "material_menu.dart"
+  },
+  "type": {
+    "menuDirectives": {
+      "class": "Identifier",
+      "name": "menuDirectives",
+      "moduleUrl": "asset:material_menu/lib/material_menu.dart",
+      "prefix": null,
+      "value": [
+        {
+          "class": "Identifier",
+          "name": "MaterialMenuComponent",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "MenuItemComponent",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        },
+        {
+          "class": "Identifier",
+          "name": "MenuSeparatorComponent",
+          "moduleUrl": null,
+          "prefix": null,
+          "value": null
+        }
+      ]
+    }
+  },
+  "alias": {
+    "menuDirectives": [
+      "MaterialMenuComponent",
+      "MenuItemComponent",
+      "MenuSeparatorComponent"
+    ]
+  }
+}

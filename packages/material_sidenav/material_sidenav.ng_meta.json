@@ -1,0 +1,73 @@
+{
+  "ngDeps": {
+    "1": "material_sidenav",
+    "4": [
+      {
+        "1": "src/material_sidenav/material_sidenav.dart"
+      }
+    ],
+    "6": "material_sidenav.dart",
+    "7": [
+      {
+        "1": "src/material_sidenav/material_sidenav.template.dart",
+        "4": "i0"
+      }
+    ]
+  },
+  "type": {
+    "MaterialSidenavComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "material-sidenav",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "MaterialSidenavComponent",
+        "moduleUrl": "asset:material_sidenav/lib/src/material_sidenav/material_sidenav.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "background": "background",
+        "open": "open",
+        "right": "right",
+        "overlay": "overlay"
+      },
+      "inputTypes": {
+        "background": " String",
+        "open": " bool",
+        "right": " bool",
+        "overlay": " bool"
+      },
+      "outputs": {
+        "openChange": "openChange"
+      },
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        1
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div (click)=\"close()\" [class.open]=\"open\" [style.opacity]=\"overlay ? 0.5 : 0\" id=\"overlay\"></div>\n<div [class.open]=\"open\" [class.right]=\"right\" [style.background-color]=\"background\" id=\"main\">\n    <ng-content></ng-content>\n</div>\n",
+        "templateUrl": "asset:material_sidenav/lib/src/material_sidenav/material_sidenav.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:material_sidenav/lib/src/material_sidenav/material_sidenav.css"
+        ],
+        "ngContentSelectors": [
+          "*"
+        ]
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

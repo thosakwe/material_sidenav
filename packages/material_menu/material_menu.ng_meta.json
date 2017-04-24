@@ -1,0 +1,298 @@
+{
+  "ngDeps": {
+    "1": "material_menu",
+    "3": [
+      {
+        "1": "src/material_menu/material_menu.dart",
+        "5": false
+      },
+      {
+        "1": "src/menu_item/menu_item.dart",
+        "5": false
+      },
+      {
+        "1": "src/menu_separator/menu_separator.dart",
+        "5": false
+      }
+    ],
+    "4": [
+      {
+        "1": "src/material_menu/material_menu.dart"
+      },
+      {
+        "1": "src/menu_item/menu_item.dart"
+      },
+      {
+        "1": "src/menu_separator/menu_separator.dart"
+      }
+    ],
+    "6": "material_menu.dart",
+    "7": [
+      {
+        "1": "src/material_menu/material_menu.template.dart",
+        "4": "i0"
+      },
+      {
+        "1": "src/menu_item/menu_item.template.dart",
+        "4": "i1"
+      },
+      {
+        "1": "src/menu_separator/menu_separator.template.dart",
+        "4": "i2"
+      }
+    ]
+  },
+  "type": {
+    "MaterialMenuComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "material-menu",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "MaterialMenuComponent",
+        "moduleUrl": "asset:material_menu/lib/src/material_menu/material_menu.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "background": "background",
+        "foreground": "foreground",
+        "elevation": "elevation"
+      },
+      "inputTypes": {
+        "background": " String",
+        "foreground": " String",
+        "elevation": " int"
+      },
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div id=\"main\" [style.background-color]=\"background\" [style.box-shadow]=\"boxShadow\"\n    [style.color]=\"foreground\">\n    <ng-content></ng-content>\n</div>",
+        "templateUrl": "asset:material_menu/lib/src/material_menu/material_menu.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:material_menu/lib/src/material_menu/material_menu.css"
+        ],
+        "ngContentSelectors": [
+          "*"
+        ]
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    },
+    "MenuItemComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "menu-item",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "MenuItemComponent",
+        "moduleUrl": "asset:material_menu/lib/src/menu_item/menu_item.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "avatar": "avatar",
+        "alt": "alt",
+        "href": "href",
+        "disabled": "disabled",
+        "icon": "icon",
+        "large": "large",
+        "selected": "selected",
+        "separated": "separated"
+      },
+      "inputTypes": {
+        "avatar": " String",
+        "alt": " String",
+        "href": " String",
+        "disabled": " bool",
+        "icon": " String",
+        "large": " bool",
+        "selected": " bool",
+        "separated": " bool"
+      },
+      "outputs": {
+        "click": "click"
+      },
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        1
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div *ngIf=\"href?.isNotEmpty != true\" class=\"main\" (click)=\"handleClick($event)\" [class.disabled]=\"disabled\" [class.large]=\"large\"\n    [class.selected]=\"selected\" [class.separated]=\"separated\" role=\"button\">\n    <material-ripple *ngIf=\"!disabled\"></material-ripple>\n    <img *ngIf=\"avatar != null && avatar.isNotEmpty\" [class.large]=\"large\" src=\"{{avatar}}\" alt=\"{{alt}}\" avatar>\n    <glyph *ngIf=\"icon != null && icon.isNotEmpty\" [class.large]=\"large\" [icon]=\"icon\"></glyph>\n    <ng-content></ng-content>\n</div>\n<a *ngIf=\"href?.isNotEmpty == true\" class=\"main\" (click)=\"handleClick($event)\" [class.disabled]=\"disabled\" [class.large]=\"large\"\n    [class.selected]=\"selected\" [class.separated]=\"separated\" [href]=\"href\" role=\"button\">\n    <material-ripple *ngIf=\"!disabled\"></material-ripple>\n    <img *ngIf=\"avatar != null && avatar.isNotEmpty\" [class.large]=\"large\" src=\"{{avatar}}\" alt=\"{{alt}}\" avatar>\n    <glyph *ngIf=\"icon != null && icon.isNotEmpty\" [class.large]=\"large\" [icon]=\"icon\"></glyph>\n    <ng-content select=\".link.content\"></ng-content>\n</a>",
+        "templateUrl": "asset:material_menu/lib/src/menu_item/menu_item.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:material_menu/lib/src/menu_item/menu_item.css"
+        ],
+        "ngContentSelectors": [
+          "*",
+          ".link.content"
+        ]
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    },
+    "MenuSeparatorComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "menu-separator",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "MenuSeparatorComponent",
+        "moduleUrl": "asset:material_menu/lib/src/menu_separator/menu_separator.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div id=\"main\"></div>",
+        "templateUrl": "asset:material_menu/lib/src/menu_separator/menu_separator.dart",
+        "styles": [
+          "    #main {\n      margin: 7px 0px 8px;\n      height: 1px;\n      border: none;\n      background-color: rgb(224, 224, 224);\n    }\n    "
+        ],
+        "styleUrls": [],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    },
+    "menuDirectives": {
+      "class": "Identifier",
+      "name": "menuDirectives",
+      "moduleUrl": "asset:material_menu/lib/material_menu.dart",
+      "prefix": null,
+      "value": [
+        {
+          "class": "Provider",
+          "token": {
+            "value": null,
+            "identifier": {
+              "class": "Type",
+              "name": "MaterialMenuComponent",
+              "moduleUrl": "asset:material_menu/lib/src/material_menu/material_menu.dart",
+              "prefix": null,
+              "isHost": false,
+              "value": null,
+              "diDeps": []
+            },
+            "identifierIsInstance": false
+          },
+          "useClass": {
+            "class": "Type",
+            "name": "MaterialMenuComponent",
+            "moduleUrl": "asset:material_menu/lib/src/material_menu/material_menu.dart",
+            "prefix": null,
+            "isHost": false,
+            "value": null,
+            "diDeps": []
+          },
+          "useExisting": null,
+          "useValue": null,
+          "useFactory": null,
+          "multi": false,
+          "deps": null
+        },
+        {
+          "class": "Provider",
+          "token": {
+            "value": null,
+            "identifier": {
+              "class": "Type",
+              "name": "MenuItemComponent",
+              "moduleUrl": "asset:material_menu/lib/src/menu_item/menu_item.dart",
+              "prefix": null,
+              "isHost": false,
+              "value": null,
+              "diDeps": []
+            },
+            "identifierIsInstance": false
+          },
+          "useClass": {
+            "class": "Type",
+            "name": "MenuItemComponent",
+            "moduleUrl": "asset:material_menu/lib/src/menu_item/menu_item.dart",
+            "prefix": null,
+            "isHost": false,
+            "value": null,
+            "diDeps": []
+          },
+          "useExisting": null,
+          "useValue": null,
+          "useFactory": null,
+          "multi": false,
+          "deps": null
+        },
+        {
+          "class": "Provider",
+          "token": {
+            "value": null,
+            "identifier": {
+              "class": "Type",
+              "name": "MenuSeparatorComponent",
+              "moduleUrl": "asset:material_menu/lib/src/menu_separator/menu_separator.dart",
+              "prefix": null,
+              "isHost": false,
+              "value": null,
+              "diDeps": []
+            },
+            "identifierIsInstance": false
+          },
+          "useClass": {
+            "class": "Type",
+            "name": "MenuSeparatorComponent",
+            "moduleUrl": "asset:material_menu/lib/src/menu_separator/menu_separator.dart",
+            "prefix": null,
+            "isHost": false,
+            "value": null,
+            "diDeps": []
+          },
+          "useExisting": null,
+          "useValue": null,
+          "useFactory": null,
+          "multi": false,
+          "deps": null
+        }
+      ]
+    }
+  },
+  "alias": {
+    "menuDirectives": [
+      "MaterialMenuComponent",
+      "MenuItemComponent",
+      "MenuSeparatorComponent"
+    ]
+  }
+}

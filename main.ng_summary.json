@@ -1,0 +1,36 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/platform/browser_static.dart",
+        "2": [
+          "bootstrapStatic"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular_components/angular_components.dart",
+        "2": [
+          "materialProviders"
+        ],
+        "5": false
+      },
+      {
+        "1": "components/app/app.dart",
+        "5": false
+      }
+    ],
+    "6": "main.dart"
+  },
+  "type": {
+    "main": {
+      "class": "Identifier",
+      "name": "main",
+      "moduleUrl": "asset:material_sidenav/web/main.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

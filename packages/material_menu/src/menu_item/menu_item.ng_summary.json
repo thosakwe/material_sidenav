@@ -1,0 +1,122 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "dart:async",
+        "5": false
+      },
+      {
+        "1": "dart:html",
+        "2": [
+          "Event"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular2/core.dart",
+        "2": [
+          "Component",
+          "Input",
+          "OnDestroy",
+          "Output"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular_components/angular_components.dart",
+        "2": [
+          "GlyphComponent",
+          "MaterialRippleComponent"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular_components/src/utils/async/src/lazy_stream_controller.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "MenuItemComponent",
+        "6": [
+          "OnDestroy"
+        ],
+        "7": [
+          {
+            "2": "GlyphComponent"
+          },
+          {
+            "2": "MaterialRippleComponent"
+          }
+        ]
+      }
+    ],
+    "6": "menu_item.dart"
+  },
+  "type": {
+    "MenuItemComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "menu-item",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "MenuItemComponent",
+        "moduleUrl": "asset:material_menu/lib/src/menu_item/menu_item.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "avatar": "avatar",
+        "alt": "alt",
+        "href": "href",
+        "disabled": "disabled",
+        "icon": "icon",
+        "large": "large",
+        "selected": "selected",
+        "separated": "separated"
+      },
+      "inputTypes": {
+        "avatar": " String",
+        "alt": " String",
+        "href": " String",
+        "disabled": " bool",
+        "icon": " String",
+        "large": " bool",
+        "selected": " bool",
+        "separated": " bool"
+      },
+      "outputs": {
+        "click": "click"
+      },
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        1
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div *ngIf=\"href?.isNotEmpty != true\" class=\"main\" (click)=\"handleClick($event)\" [class.disabled]=\"disabled\" [class.large]=\"large\"\n    [class.selected]=\"selected\" [class.separated]=\"separated\" role=\"button\">\n    <material-ripple *ngIf=\"!disabled\"></material-ripple>\n    <img *ngIf=\"avatar != null && avatar.isNotEmpty\" [class.large]=\"large\" src=\"{{avatar}}\" alt=\"{{alt}}\" avatar>\n    <glyph *ngIf=\"icon != null && icon.isNotEmpty\" [class.large]=\"large\" [icon]=\"icon\"></glyph>\n    <ng-content></ng-content>\n</div>\n<a *ngIf=\"href?.isNotEmpty == true\" class=\"main\" (click)=\"handleClick($event)\" [class.disabled]=\"disabled\" [class.large]=\"large\"\n    [class.selected]=\"selected\" [class.separated]=\"separated\" [href]=\"href\" role=\"button\">\n    <material-ripple *ngIf=\"!disabled\"></material-ripple>\n    <img *ngIf=\"avatar != null && avatar.isNotEmpty\" [class.large]=\"large\" src=\"{{avatar}}\" alt=\"{{alt}}\" avatar>\n    <glyph *ngIf=\"icon != null && icon.isNotEmpty\" [class.large]=\"large\" [icon]=\"icon\"></glyph>\n    <ng-content select=\".link.content\"></ng-content>\n</a>",
+        "templateUrl": "asset:material_menu/lib/src/menu_item/menu_item.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:material_menu/lib/src/menu_item/menu_item.css"
+        ],
+        "ngContentSelectors": [
+          "*",
+          ".link.content"
+        ]
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

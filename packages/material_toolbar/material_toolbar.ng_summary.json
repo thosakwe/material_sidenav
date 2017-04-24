@@ -1,0 +1,130 @@
+{
+  "ngDeps": {
+    "1": "material_toolbar",
+    "3": [
+      {
+        "1": "dart:async",
+        "5": false
+      },
+      {
+        "1": "dart:html",
+        "2": [
+          "Event"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular2/core.dart",
+        "2": [
+          "Component",
+          "Input",
+          "OnDestroy",
+          "Output"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular_components/angular_components.dart",
+        "2": [
+          "GlyphComponent",
+          "MaterialButtonComponent"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular_components/src/utils/async/src/lazy_stream_controller.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "MaterialToolbarComponent",
+        "6": [
+          "OnDestroy"
+        ],
+        "7": [
+          {
+            "2": "GlyphComponent"
+          },
+          {
+            "2": "MaterialButtonComponent"
+          }
+        ]
+      }
+    ],
+    "6": "material_toolbar.dart"
+  },
+  "type": {
+    "MaterialToolbarComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "material-toolbar",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "MaterialToolbarComponent",
+        "moduleUrl": "asset:material_toolbar/lib/material_toolbar.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "background": "background",
+        "elevation": "elevation",
+        "foreground": "foreground",
+        "height": "height",
+        "icon": "icon",
+        "mediumTall": "mediumTall",
+        "tall": "tall",
+        "title": "title",
+        "middleTitle": "middleTitle",
+        "bottomTitle": "bottomTitle",
+        "width": "width"
+      },
+      "inputTypes": {
+        "background": " String",
+        "elevation": " int",
+        "foreground": " String",
+        "height": " String",
+        "icon": " String",
+        "mediumTall": " bool",
+        "tall": " bool",
+        "title": " String",
+        "middleTitle": " String",
+        "bottomTitle": " String",
+        "width": " String"
+      },
+      "outputs": {
+        "iconClick": "iconClick"
+      },
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        1
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div [style.box-shadow]=\"boxShadow\">\n    <div id=\"main\" [style.background-color]=\"background\" [style.color]=\"foreground\"\n         [style.height]=\"height\" [style.width]=\"width\">\n        <div id=\"top\">\n            <material-button *ngIf=\"icon != null && icon.isNotEmpty\" id=\"menu-button\" style=\"margin-right: 1em;\"\n                             (click)=\"handleClick($event)\"\n                             icon>\n                <glyph [icon]=\"icon\"></glyph>\n            </material-button>\n            <div class=\"title\">{{title}}</div>\n            <div class=\"content\">\n                <ng-content select=\".right-content\"></ng-content>\n            </div>\n        </div>\n        <div id=\"middle\" *ngIf=\"mediumTall || tall\">\n            <div class=\"title\">{{middleTitle}}</div>\n            <div class=\"content\">\n                <ng-content select=\".middle-content\"></ng-content>\n            </div>\n        </div>\n        <div id=\"bottom\" *ngIf=\"tall\">\n            <div class=\"title\">{{bottomTitle}}</div>\n            <div class=\"content\">\n                <ng-content select=\".bottom-content\"></ng-content>\n            </div>\n        </div>\n    </div>\n    <div id=\"fit-container\">\n        <ng-content select=\".fit\"></ng-content>\n    </div>\n</div>",
+        "templateUrl": "asset:material_toolbar/lib/material_toolbar.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:material_toolbar/lib/material_toolbar.css"
+        ],
+        "ngContentSelectors": [
+          ".right-content",
+          ".middle-content",
+          ".bottom-content",
+          ".fit"
+        ]
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

@@ -1,0 +1,13 @@
+{
+  "ngDeps": {
+    "1": "material_sidenav",
+    "4": [
+      {
+        "1": "src/material_sidenav/material_sidenav.dart"
+      }
+    ],
+    "6": "material_sidenav.dart"
+  },
+  "type": {},
+  "alias": {}
+}

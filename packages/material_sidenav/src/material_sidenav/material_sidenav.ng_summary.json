@@ -1,0 +1,90 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "dart:async",
+        "5": false
+      },
+      {
+        "1": "package:angular2/core.dart",
+        "2": [
+          "Component",
+          "Input",
+          "OnDestroy",
+          "Output"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular_components/src/utils/async/src/lazy_stream_controller.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "MaterialSidenavComponent",
+        "6": [
+          "OnDestroy"
+        ]
+      }
+    ],
+    "6": "material_sidenav.dart"
+  },
+  "type": {
+    "MaterialSidenavComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "material-sidenav",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "MaterialSidenavComponent",
+        "moduleUrl": "asset:material_sidenav/lib/src/material_sidenav/material_sidenav.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "background": "background",
+        "open": "open",
+        "right": "right",
+        "overlay": "overlay"
+      },
+      "inputTypes": {
+        "background": " String",
+        "open": " bool",
+        "right": " bool",
+        "overlay": " bool"
+      },
+      "outputs": {
+        "openChange": "openChange"
+      },
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        1
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div (click)=\"close()\" [class.open]=\"open\" [style.opacity]=\"overlay ? 0.5 : 0\" id=\"overlay\"></div>\n<div [class.open]=\"open\" [class.right]=\"right\" [style.background-color]=\"background\" id=\"main\">\n    <ng-content></ng-content>\n</div>\n",
+        "templateUrl": "asset:material_sidenav/lib/src/material_sidenav/material_sidenav.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:material_sidenav/lib/src/material_sidenav/material_sidenav.css"
+        ],
+        "ngContentSelectors": [
+          "*"
+        ]
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}

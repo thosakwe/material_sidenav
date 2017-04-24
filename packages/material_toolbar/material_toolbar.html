@@ -1,0 +1,31 @@
+<div [style.box-shadow]="boxShadow">
+    <div id="main" [style.background-color]="background" [style.color]="foreground"
+         [style.height]="height" [style.width]="width">
+        <div id="top">
+            <material-button *ngIf="icon != null && icon.isNotEmpty" id="menu-button" style="margin-right: 1em;"
+                             (click)="handleClick($event)"
+                             icon>
+                <glyph [icon]="icon"></glyph>
+            </material-button>
+            <div class="title">{{title}}</div>
+            <div class="content">
+                <ng-content select=".right-content"></ng-content>
+            </div>
+        </div>
+        <div id="middle" *ngIf="mediumTall || tall">
+            <div class="title">{{middleTitle}}</div>
+            <div class="content">
+                <ng-content select=".middle-content"></ng-content>
+            </div>
+        </div>
+        <div id="bottom" *ngIf="tall">
+            <div class="title">{{bottomTitle}}</div>
+            <div class="content">
+                <ng-content select=".bottom-content"></ng-content>
+            </div>
+        </div>
+    </div>
+    <div id="fit-container">
+        <ng-content select=".fit"></ng-content>
+    </div>
+</div>

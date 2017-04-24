@@ -1,0 +1,77 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "2": [
+          "Component",
+          "Input"
+        ],
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "MaterialMenuComponent"
+      }
+    ],
+    "6": "material_menu.dart",
+    "7": [
+      {
+        "1": "package:angular2/core.template.dart",
+        "4": "i0"
+      }
+    ]
+  },
+  "type": {
+    "MaterialMenuComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "material-menu",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "MaterialMenuComponent",
+        "moduleUrl": "asset:material_menu/lib/src/material_menu/material_menu.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 6,
+      "inputs": {
+        "background": "background",
+        "foreground": "foreground",
+        "elevation": "elevation"
+      },
+      "inputTypes": {
+        "background": " String",
+        "foreground": " String",
+        "elevation": " int"
+      },
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div id=\"main\" [style.background-color]=\"background\" [style.box-shadow]=\"boxShadow\"\n    [style.color]=\"foreground\">\n    <ng-content></ng-content>\n</div>",
+        "templateUrl": "asset:material_menu/lib/src/material_menu/material_menu.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:material_menu/lib/src/material_menu/material_menu.css"
+        ],
+        "ngContentSelectors": [
+          "*"
+        ]
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}
