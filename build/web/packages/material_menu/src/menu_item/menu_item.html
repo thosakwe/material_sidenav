@@ -1,7 +1,0 @@
-<div id="main" (click)="handleClick($event)" [class.disabled]="disabled" [class.large]="large"
-    [class.selected]="selected" [class.separated]="separated" role="button">
-    <material-ripple *ngIf="!disabled"></material-ripple>
-    <img *ngIf="avatar != null && avatar.isNotEmpty" [class.large]="large" src="{{avatar}}" alt="{{alt}}" avatar>
-    <glyph *ngIf="icon != null && icon.isNotEmpty" [class.large]="large" [icon]="icon"></glyph>
-    <ng-content></ng-content>
-</div>
