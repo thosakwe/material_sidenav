@@ -6,19 +6,18 @@
 .project
 .pub/
 .scripts-bin/
-build/
-**/packages/
+build
 
 # Files created by dart2js
 # (Most Dart developers will use pub build to compile Dart, use/modify these 
 #  rules if you intend to use dart2js directly
 #  Convention is to use extension '.dart.js' for Dart compiled to Javascript to
 #  differentiate from explicit Javascript files)
-*.dart.js
 *.part.js
 *.js.deps
 *.js.map
 *.info.json
+*.ng*.json
 
 # Directory created by dartdoc
 doc/api/

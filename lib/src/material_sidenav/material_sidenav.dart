@@ -1,10 +1,12 @@
-import 'package:angular2/core.dart' show Component, EventEmitter, Input, Output;
+import 'dart:async';
+import 'package:angular2/core.dart' show Component, Input, OnDestroy, Output;
+import 'package:angular_components/src/utils/async/src/lazy_stream_controller.dart';
 
 @Component(
     selector: 'material-sidenav',
     templateUrl: 'material_sidenav.html',
     styleUrls: const ['material_sidenav.css'])
-class MaterialSidenavComponent {
+class MaterialSidenavComponent implements OnDestroy {
   @Input()
   String background = '#fff';
 
@@ -14,10 +16,18 @@ class MaterialSidenavComponent {
   @Input()
   bool overlay = true;
 
+  final StreamController<bool> _openChange =
+      new LazyStreamController<bool>.broadcast();
+
   @Output()
-  final EventEmitter<bool> openChange = new EventEmitter<bool>();
+  Stream<bool> get openChange => _openChange.stream;
 
   void close() {
-    openChange.add(open = false);
+    _openChange.add(open = false);
+  }
+
+  @override
+  ngOnDestroy() {
+    _openChange.close();
   }
 }

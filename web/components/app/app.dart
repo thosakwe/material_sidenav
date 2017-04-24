@@ -1,5 +1,5 @@
 import 'package:angular2/core.dart' show Component;
-import 'package:angular2_components/angular2_components.dart'
+import 'package:angular_components/angular_components.dart'
     show materialDirectives;
 import 'package:material_menu/material_menu.dart';
 import 'package:material_sidenav/material_sidenav.dart';
